@@ -16,12 +16,9 @@ Vasco Meerman (vmeerman.appdev@gmail.com) => BE development
 3. Goal of the Project: (Describe here which problem are you solving and your motivation)
 
 The inspiration for this project was the movie “Minority Report”, specifically the scene where Tom Cruise is using hand gestures to control the display.
-Based on the output from tutorial 1 we know the sensor can tell XYZ dimensions/directions, which means that technically we can capture most of the movements of the mouse.
-
-We are going to reuse parts of the code from tutorial 1 and modify it to create and open a port to submit data as we move the sensor. More clearly, it’ll be passing the data to a python script. There is a package in python called “PYAUTOGUI” that allows you to control the position of the mouse, which means that once the python application receives the information it can identify changes in the data and correlate those to the mouse position. We will try and capture different movements for the mouse. We will try to at the minimum replicate all the movement classes that the PYAUTOGUI package captures.
-
-This pipeline will allow you to transfer the information from the sensor to something that can control the position of the mouse. The motivation for this project is that you can integrate this with any device or display so instead of having to manually select options you can do so via gestures, in other words touch might be augmented or substituted by motion. It could later on be modified to work for people with disabilities or ones who have suffered an injury to their fingers or arms, and allow them to use this as a headband (or similar device) to control the mouse/cursor’s movement.
-
+Based on the output from tutorial 1 we know the sensor can tell XYZ dimensions/directions, which means that technically we can capture most of the movements of the mouse.  
+We are going to reuse parts of the code from tutorial 1 and modify it to create and open a port to submit data as we move the sensor. More clearly, it’ll be passing the data to a python script. There is a package in python called “PYAUTOGUI” that allows you to control the position of the mouse, which means that once the python application receives the information it can identify changes in the data and correlate those to the mouse position. We will try and capture different movements for the mouse. We will try to at the minimum replicate all the movement classes that the PYAUTOGUI package captures.  
+This pipeline will allow you to transfer the information from the sensor to something that can control the position of the mouse. The motivation for this project is that you can integrate this with any device or display so instead of having to manually select options you can do so via gestures, in other words touch might be augmented or substituted by motion. It could later on be modified to work for people with disabilities or ones who have suffered an injury to their fingers or arms, and allow them to use this as a headband (or similar device) to control the mouse/cursor’s movement.  
 Additionally, this would also be a better option for interaction in a VR or AR world.
 
 
@@ -32,6 +29,7 @@ Python package- PYAUTOGUI
 Anaconda Package (Python 3.7, 64 bit including Jupyter notebook, Numpy, panda, scikit-learn, TensorFlow, Keras, Matplotlib, PyAutoGUI), Django
 
 a. include a GitHub repository
+
 https://github.com/hidai25/mouserepwithgestures
 
 b. any other tools? (example: dropbox, google drive, slack, google collab, etc.)
@@ -72,7 +70,7 @@ Week 3 (27-03.08):
 * Prepare powerpoint slides
 
 Week 4 (3-03.08):
- 
+
 * Practice for presentation
 * Final Class presentation
 
