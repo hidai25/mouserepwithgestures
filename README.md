@@ -1,7 +1,7 @@
 Please submit your proposal with the following content:
-1. ##Team Name:
+1. ## Team Name:
 Computer mouse replication with gestures
-2. ##Team Members and Roles: (Depending on the strengths of each member as an example)
+2. ## Team Members and Roles: (Depending on the strengths of each member as an example)
 
 Gurel Ari (gurelari.ivy@gmail.com) => Data Collection
 
