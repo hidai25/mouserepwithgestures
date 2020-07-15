@@ -1,7 +1,7 @@
 Please submit your proposal with the following content:
-1. ## Team Name:
-Computer mouse replication with gestures
-2. ## Team Members and Roles: (Depending on the strengths of each member as an example)
+1. ### Team Name: Computer mouse replication with gestures
+
+2. ### Team Members and Roles: (Depending on the strengths of each member as an example)
 
 Gurel Ari (gurelari.ivy@gmail.com) => Data Collection
 
@@ -13,7 +13,7 @@ Nina Tabari ( naz706@g.harvard.edu) => Project Lead and writing the python scrip
 
 Vasco Meerman (vmeerman.appdev@gmail.com) => BE development  
 
-3. Goal of the Project: (Describe here which problem are you solving and your motivation)
+3. ### Goal of the Project: (Describe here which problem are you solving and your motivation)
 
 The inspiration for this project was the movie “Minority Report”, specifically the scene where Tom Cruise is using hand gestures to control the display.
 Based on the output from tutorial 1 we know the sensor can tell XYZ dimensions/directions, which means that technically we can capture most of the movements of the mouse.  
@@ -22,7 +22,7 @@ This pipeline will allow you to transfer the information from the sensor to some
 Additionally, this would also be a better option for interaction in a VR or AR world.
 
 
-4. Software and Developing tools:
+4. ### Software and Developing tools:
 
 Python package- PYAUTOGUI
 
@@ -36,13 +36,13 @@ b. any other tools? (example: dropbox, google drive, slack, google collab, etc.)
 
 Trello, Google Drive, slack
 
-5. Hardware used:
+5. ### Hardware used:
 We are going to base our work on one sensortile in order to acquire data.
 
-6. Team Meeting Schedule: (tentative hours to meet with your team every week)
+6. ### Team Meeting Schedule: (tentative hours to meet with your team every week)
 Twice a week on sunday and wednesday
 
-7. List of Milestones, week by week:
+7. ### List of Milestones, week by week:
 
 Week 1 (13-20.07):  
 
@@ -75,5 +75,5 @@ Week 4 (3-03.08):
 * Practice for presentation
 * Final Class presentation
 
-8. Other comments:
+8. ### Other comments:
 As a stretch goal we might create an interactive web application for this project.
