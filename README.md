@@ -2,11 +2,17 @@ Please submit your proposal with the following content:
 1. Team Name:
 Computer mouse replication with gestures
 2. Team Members and Roles: (Depending on the strengths of each member as an example)
+
 Gurel Ari (gurelari.ivy@gmail.com) => Data Collection
+
 Hidai Bar-mor (hidai25@gmail.com) => Data Processing
+
 Vikram Maduskar (vim882@g.harvard.edu) => Data Modeling and Machine Learning
+
 Nina Tabari ( naz706@g.harvard.edu) => Project Lead and writing the python script
+
 Vasco Meerman (vmeerman.appdev@gmail.com) => BE development  
+
 3. Goal of the Project: (Describe here which problem are you solving and your motivation)
 The inspiration for this project was the movie “Minority Report”, specifically the scene where Tom Cruise is using hand gestures to control the display.
 Based on the output from tutorial 1 we know the sensor can tell XYZ dimensions/directions, which means that technically we can capture most of the movements of the mouse.
