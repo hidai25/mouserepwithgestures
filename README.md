@@ -26,16 +26,22 @@ Additionally, this would also be a better option for interaction in a VR or AR w
 
 
 4. Software and Developing tools:
+
 Python package- PYAUTOGUI
 Anaconda Package (Python 3.7, 64 bit including Jupyter notebook, Numpy, panda, scikit-learn, TensorFlow, Keras, Matplotlib, PyAutoGUI), Django
+
 a. include a GitHub repository
 https://github.com/hidai25/mouserepwithgestures
+
 b. any other tools? (example: dropbox, google drive, slack, google collab, etc.)
 Trello, Google Drive, slack
+
 5. Hardware used:
 We are going to base our work on one sensortile in order to acquire data.
+
 6. Team Meeting Schedule: (tentative hours to meet with your team every week)
 Twice a week on sunday and wednesday
+
 7. List of Milestones, week by week:
 Week 1 (13-20.07):
 Setting up a laptop developing environment including all the software packages/tools
@@ -60,5 +66,6 @@ Prepare powerpoint slides
 Week 4 (3-03.08):
 Practice for presentation
 Final Class presentation
+
 8. Other comments:
 As a stretch goal we might create an interactive web application for this project.
