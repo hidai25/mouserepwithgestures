@@ -46,12 +46,15 @@ Twice a week on sunday and wednesday
 7. List of Milestones, week by week:
 
 Week 1 (13-20.07):  
+
 * Setting up a laptop developing environment including all the software packages/tools
 * Define the set of specific gestures classes to be recognized and passed to the screen for classification
 * Define the data collection, data preparation and data modelling approach
 * Configure and test the device
-* Identify what movements  
-Week 2 (20-27.07):  
+* Identify what movements
+
+Week 2 (20-27.07):
+
 * Data collection with the sensor for the set of defined gesture classes
 * Data preprocessing and cleaning
 * Data exploration and feature engineering
@@ -59,13 +62,17 @@ Week 2 (20-27.07):
 * Model training
 * Model evaluation and Optimization
 * Model Deployment in device  
+
 Week 3 (27-03.08):
+
 * Conduct and document motion predictions/classifications by device
 * Prepare project report (pdf/word document)
 * Prepare project video
 * Update and finalized code/content on project in Github
 * Prepare powerpoint slides
-Week 4 (3-03.08):  
+
+Week 4 (3-03.08):
+ 
 * Practice for presentation
 * Final Class presentation
 
