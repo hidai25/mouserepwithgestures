@@ -50,7 +50,7 @@ Week 1 (13-20.07):
 * Define the set of specific gestures classes to be recognized and passed to the screen for classification
 * Define the data collection, data preparation and data modelling approach
 * Configure and test the device
-* Identify what movements
+* Identify what movements  
 Week 2 (20-27.07):  
 * Data collection with the sensor for the set of defined gesture classes
 * Data preprocessing and cleaning
