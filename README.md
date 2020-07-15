@@ -28,6 +28,7 @@ Additionally, this would also be a better option for interaction in a VR or AR w
 4. Software and Developing tools:
 
 Python package- PYAUTOGUI
+
 Anaconda Package (Python 3.7, 64 bit including Jupyter notebook, Numpy, panda, scikit-learn, TensorFlow, Keras, Matplotlib, PyAutoGUI), Django
 
 a. include a GitHub repository
@@ -45,28 +46,28 @@ Twice a week on sunday and wednesday
 7. List of Milestones, week by week:
 
 Week 1 (13-20.07):
-Setting up a laptop developing environment including all the software packages/tools
-Define the set of specific gestures classes to be recognized and passed to the screen for classification
-Define the data collection, data preparation and data modelling approach
-Configure and test the device
-Identify what movements
+* Setting up a laptop developing environment including all the software packages/tools
+* Define the set of specific gestures classes to be recognized and passed to the screen for classification
+* Define the data collection, data preparation and data modelling approach
+* Configure and test the device
+* Identify what movements
 Week 2 (20-27.07):
-Data collection with the sensor for the set of defined gesture classes
-Data preprocessing and cleaning
-Data exploration and feature engineering
-Data modelling
-Model training
-Model evaluation and Optimization
-Model Deployment in device
+* Data collection with the sensor for the set of defined gesture classes
+* Data preprocessing and cleaning
+* Data exploration and feature engineering
+* Data modelling
+* Model training
+* Model evaluation and Optimization
+* Model Deployment in device
 Week 3 (27-03.08):
-Conduct and document motion predictions/classifications by device
-Prepare project report (pdf/word document)
-Prepare project video
-Update and finalized code/content on project in Github
-Prepare powerpoint slides
+* Conduct and document motion predictions/classifications by device
+* Prepare project report (pdf/word document)
+* Prepare project video
+* Update and finalized code/content on project in Github
+* Prepare powerpoint slides
 Week 4 (3-03.08):
-Practice for presentation
-Final Class presentation
+* Practice for presentation
+* Final Class presentation
 
 8. Other comments:
 As a stretch goal we might create an interactive web application for this project.
