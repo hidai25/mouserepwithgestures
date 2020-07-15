@@ -43,6 +43,7 @@ We are going to base our work on one sensortile in order to acquire data.
 Twice a week on sunday and wednesday
 
 7. List of Milestones, week by week:
+
 Week 1 (13-20.07):
 Setting up a laptop developing environment including all the software packages/tools
 Define the set of specific gestures classes to be recognized and passed to the screen for classification
