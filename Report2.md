@@ -29,11 +29,13 @@ Aiming to complete the project by August 1
 ## Part 2. (2 points)
 
 1. Estimate the current cumulative percentage of progress for your project.
+
 My project is: _____50_____ % completed
 
 ## Part 3. (5 points)
 
 1. Submit a presentation that summarizes your progress this past week.
+
 You will present this during class next week.
 
 https://docs.google.com/presentation/d/1ZOatAAsYktmcW_vo6f40rGUlPwKiAvFY_3-QPweoKwQ/edit?ts=5f145b97#slide=id.g8cd9880f1c_0_0
