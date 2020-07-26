@@ -20,10 +20,12 @@ Please spend 5-10 minutes expounding on the following:
 * We are creating the pipeline between the sensortile C program and the python script
 
 2. What roadblocks/issues did you face?
+
 Still working on the real time connection between the raw data from the sensor and the Python package
 Some team members are still experiencing issues with some of the tutorials
 
 3. What do you hope to accomplish in the coming week?
+
 Aiming to complete the project by August 1
 
 ## Part 2. (2 points)
