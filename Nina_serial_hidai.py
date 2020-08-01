@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sat Jul 25 21:06:33 2020
-
 @author: Hidai Bar-Mor
 """
 
@@ -9,13 +8,13 @@ import serial
 
 import time
 
-import sys
-
 import re
 pattern = 'ACC_X: (\S?[0-9]+), ACC_Y: (\S?[0-9]+), ACC_Z: (\S?[0-9]+)' #mac needs comma
 prog = re.compile(pattern)
-
-
+pattern1 = 'GYR_X: (\S?[0-9]+), GYR_Y: (\S?[0-9]+), GYR_Z: (\S?[0-9]+)'
+prog1 = re.compile(pattern1)
+pattern2 = 'MAG_X: (\S?[0-9]+), MAG_Y: (\S?[0-9]+), MAG_Z: (\S?[0-9]+)'
+prog2 = re.compile(pattern2)
 
 class serial_SensorTile():
 
@@ -45,15 +44,8 @@ class serial_SensorTile():
 
         print ("Start Serial Connection")
 
-        #try:
 
         ser = serial.Serial(self.address, self.baud_rate, timeout=self.timeout)
-
-        #except:
-
-        #    print ("Wrong serial address and shut donw system")
-
-        #    sys.exit()
 
         self.ser = ser
 
@@ -84,6 +76,14 @@ class serial_SensorTile():
         accelx = []
         accely = []
         accelz = []
+        gyrx = []
+        gyry = []
+        gyrz = []
+        magx = []
+        magy = []
+        magz = []
+
+
         if self.data_check:
 
             # read all new bytes
@@ -106,7 +106,6 @@ class serial_SensorTile():
 
             ser_bytes = ser_bytes[0:-1]             # discard unfinished line
 
-            #dis_list = []
 
 
 
@@ -123,16 +122,35 @@ class serial_SensorTile():
 
 
                 if 'ACC' in data[0]:
-                    print("inacc: {}".format(data[0].replace("\r","")))
-                    
+                    print("{}".format(data[0].replace("\r","")))
+
                     result = prog.findall(data[0].replace("\r",""))[0]
 
                     accelx.append(float(result[0]))
                     accely.append(float(result[1]))
                     accelz.append(float(result[2]))
 
+                if 'GYR' in data[0]:
+                    print("{}".format(data[0].replace("\r","")))
 
-            return accelx, accely, accelz
+                    result1 = prog1.findall(data[0].replace("\r",""))[0]
+
+                    gyrx.append(float(result1[0]))
+                    gyry.append(float(result1[1]))
+                    gyrz.append(float(result1[2]))
+
+
+                if 'MAG' in data[0]:
+                    print("{}".format(data[0].replace("\r","")))
+
+                    result2 = prog2.findall(data[0].replace("\r",""))[0]
+
+                    magx.append(float(result2[0]))
+                    magy.append(float(result2[1]))
+                    magz.append(float(result2[2]))
+
+
+            return accelx, accely, accelz, gyrx, gyry, gyrz, magx, magy, magz
 
         else:
 
@@ -144,4 +162,4 @@ class serial_SensorTile():
 
             self.data_check = 1
 
-            return accelx, accely, accelz
+            return accelx, accely, accelz, gyrx, gyry, gyrz, magx, magy, magz
