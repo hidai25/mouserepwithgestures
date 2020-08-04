@@ -1,25 +1,3 @@
-
-
-Skip to content
-Using Gmail with screen readers
-Meet
-Start a meeting
-Join a meeting
-Hangouts
-
-1 of 138,381
-python files
-Inbox
-x
-
-Hidai Bar-Mor <hidai25@gmail.com>
-Attachments
-10:45 PM (2 minutes ago)
-to me
-
-
-2 Attachments
-
 # -*- coding: utf-8 -*-
 """
 Created on Sat Jul 25 21:06:33 2020
