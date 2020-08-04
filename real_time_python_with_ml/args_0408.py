@@ -21,6 +21,29 @@ import pyautogui
 import pandas as pd
 
 from sklearn.preprocessing import StandardScaler, LabelEncoder
+# To investigate distributions
+from scipy.stats import norm, skew, probplot
+from scipy.optimize import curve_fit
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.decomposition import PCA
+from sklearn.manifold import TSNE
+
+# To build models
+from sklearn.linear_model import LogisticRegression
+from sklearn import svm
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
+from xgboost import XGBClassifier
+
+from sklearn.metrics import accuracy_score, f1_score, mean_squared_error, roc_curve, auc, roc_auc_score
+
+#Import scikit-learn metrics module for accuracy calculation
+from sklearn import metrics
+
+# scikit-learn GridSearch for Grid search cross validation for hyper-parameter tuning
+from sklearn.model_selection import GridSearchCV
 
 
 import serial_0408
@@ -31,13 +54,13 @@ import joblib
 
 # Load model and preprocessing objects
 model = joblib.load(r'sav_files/finalized_model.sav')
-scaler = joblib.load(r'sav_files/scaler.sav')
+scaler = joblib.load(r'sav_files/scalar.sav')
 pca_data = joblib.load(r'sav_files/pca.sav')
 tsne = joblib.load(r'sav_files/tsne.sav')
-label_encoder = joblib.load(r'sav_files/label_encoder.sav')
+label_encoder = joblib.load(r'sav_files/label_encoded.sav')
 
 
-address= 'COM4'
+address= '/dev/cu.usbmodemFFFFFFFEFFFF1'
 
 baud_rate = 9600
 
@@ -68,18 +91,22 @@ while True:
    [print(idx) for idx,val in enumerate(data[0]) if np.isnan(val)]
    
    if not any([np.isnan(val) for val in data[0]]):
-       
+       print (data)
+       print (pca_data)
        X_scaled = scaler.fit_transform(data)
-       X_pca = pca_data.fit(X_scaled)
-       X_tsne = tsne.transform(X_pca)
+       print (X_scaled)
+       #X_pca = pca_data.fit(X_scaled)
+       #X_tsne = tsne.transform(X_pca)
        
-       ypred = model.predict(X_tsne)
+       #ypred = model.predict(X_tsne)
        
+       ypred = model.predict(X_scaled)
+
        label = label_encoder.inverse_transform(ypred)
        
        print('Predcited gesture = ', label)
 
-        
+     
 
 
     
