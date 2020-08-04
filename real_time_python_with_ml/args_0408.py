@@ -53,11 +53,11 @@ import time
 import joblib
 
 # Load model and preprocessing objects
-model = joblib.load(r'sav_files/finalized_model.sav')
-scaler = joblib.load(r'sav_files/scalar.sav')
-pca_data = joblib.load(r'sav_files/pca.sav')
-tsne = joblib.load(r'sav_files/tsne.sav')
-label_encoder = joblib.load(r'sav_files/label_encoded.sav')
+model = joblib.load(r'finalized_model.sav')
+scaler = joblib.load(r'scalar.sav')
+pca_data = joblib.load(r'pca.sav')
+tsne = joblib.load(r'tsne.sav')
+label_encoder = joblib.load(r'label_encoded.sav')
 
 
 address= '/dev/cu.usbmodemFFFFFFFEFFFF1'
@@ -95,8 +95,8 @@ while True:
        print (pca_data)
        X_scaled = scaler.fit_transform(data)
        print (X_scaled)
-       #X_pca = pca_data.fit(X_scaled)
-       #X_tsne = tsne.transform(X_pca)
+       X_pca = pca_data.transform(X_scaled)
+       X_tsne = tsne.transform(X_pca)
        
        #ypred = model.predict(X_tsne)
        
