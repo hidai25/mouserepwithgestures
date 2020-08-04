@@ -1,3 +1,25 @@
+
+
+Skip to content
+Using Gmail with screen readers
+Meet
+Start a meeting
+Join a meeting
+Hangouts
+
+1 of 138,381
+python files
+Inbox
+x
+
+Hidai Bar-Mor <hidai25@gmail.com>
+Attachments
+10:45 PM (2 minutes ago)
+to me
+
+
+2 Attachments
+
 # -*- coding: utf-8 -*-
 """
 Created on Sat Jul 25 21:06:33 2020
@@ -11,9 +33,9 @@ import time
 import re
 pattern = 'ACC_X: (\S?[0-9]+), ACC_Y: (\S?[0-9]+), ACC_Z: (\S?[0-9]+)' #mac needs comma
 prog = re.compile(pattern)
-pattern1 = 'GYR_X: (\S?[0-9]+), GYR_Y: (\S?[0-9]+), GYR_Z: (\S?[0-9]+)' 
+pattern1 = 'GYR_X: (\S?[0-9]+), GYR_Y: (\S?[0-9]+), GYR_Z: (\S?[0-9]+)'
 prog1 = re.compile(pattern1)
-pattern2 = 'MAG_X: (\S?[0-9]+), MAG_Y: (\S?[0-9]+), MAG_Z: (\S?[0-9]+)' 
+pattern2 = 'MAG_X: (\S?[0-9]+), MAG_Y: (\S?[0-9]+), MAG_Z: (\S?[0-9]+)'
 prog2 = re.compile(pattern2)
 
 class serial_SensorTile():
@@ -72,7 +94,7 @@ class serial_SensorTile():
 
 
     def collect_data(self):
-        
+
 
         #accelx = []
        # accely = []
@@ -83,7 +105,7 @@ class serial_SensorTile():
       #  magx = []
       #  magy = []
       #  magz = []
-        
+
         X_mGa=[]
         Y_mGa=[]
         Z_mGa=[]
@@ -93,8 +115,8 @@ class serial_SensorTile():
         X_mg=[]
         Y_mg=[]
         Z_mg=[]
-        
-        
+
+
         if self.data_check:
 
             # read all new bytes
@@ -134,26 +156,26 @@ class serial_SensorTile():
 
                 if 'ACC' in data[0]:
                     #print("{}".format(data[0].replace("\r","")))
-                    
+
                     result = prog.findall(data[0].replace("\r",""))[0]
 
                     X_mGa.append(float(result[0]))
                     Y_mGa.append(float(result[1]))
                     Z_mGa.append(float(result[2]))
-                    
+
                 if 'GYR' in data[0]:
                    # print("{}".format(data[0].replace("\r","")))
-                    
+
                     result1 = prog1.findall(data[0].replace("\r",""))[0]
 
                     X_dps.append(float(result1[0]))
                     Y_dps.append(float(result1[1]))
                     Z_dps.append(float(result1[2]))
-                    
-                    
+
+
                 if 'MAG' in data[0]:
                   #  print("{}".format(data[0].replace("\r","")))
-                    
+
                     result2 = prog2.findall(data[0].replace("\r",""))[0]
 
                     X_mg.append(float(result2[0]))
