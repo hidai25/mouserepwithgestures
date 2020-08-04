@@ -21,30 +21,7 @@ import pyautogui
 import pandas as pd
 
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-# To investigate distributions
-from scipy.stats import norm, skew, probplot
-from scipy.optimize import curve_fit
-from sklearn.preprocessing import StandardScaler, LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.decomposition import PCA
-from sklearn.manifold import TSNE
-
-# To build models
-from sklearn.linear_model import LogisticRegression
-from sklearn import svm
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import AdaBoostClassifier
-from xgboost import XGBClassifier
-
-from sklearn.metrics import accuracy_score, f1_score, mean_squared_error, roc_curve, auc, roc_auc_score
-
-#Import scikit-learn metrics module for accuracy calculation
-from sklearn import metrics
-
-# scikit-learn GridSearch for Grid search cross validation for hyper-parameter tuning
-from sklearn.model_selection import GridSearchCV
-
+#import Nina_serial_hidai
 
 import serial_0408
 
@@ -52,15 +29,24 @@ import time
 
 import joblib
 
+import warnings
+
+warnings.filterwarnings('ignore')
+
 # Load model and preprocessing objects
 model = joblib.load(r'sav_files/finalized_model.sav')
-scaler = joblib.load(r'sav_files/scalar.sav')
+scaler = joblib.load(r'sav_files/scaler.sav')
 pca_data = joblib.load(r'sav_files/pca.sav')
 tsne = joblib.load(r'sav_files/tsne.sav')
-label_encoder = joblib.load(r'sav_files/label_encoded.sav')
+label_encoder = joblib.load(r'sav_files/label_encoder.sav')
 
+#model_p = joblib.load(r'sav_files_p/finalized_model_p.sav')
+#scaler_p = joblib.load(r'sav_files_p/scaler_p.sav')
+#pca_data_p = joblib.load(r'sav_files_p/pca_p.sav')
+#tsne_p = joblib.load(r'sav_files_p/tsne_p.sav')
+#label_encoder_p = joblib.load(r'sav_files_p/label_encoder_p.sav')
 
-address= '/dev/cu.usbmodemFFFFFFFEFFFF1'
+address= 'COM4'
 
 baud_rate = 9600
 
@@ -80,53 +66,59 @@ x, y = pyautogui.position()
 screen_width, screen_height = pyautogui.size()
 
 while True:
-  
-   
+
+   # accelx, accely, accelz, gyrx, gyry, gyrz, magx, magy, magz = sensortile.collect_data()
    X_mg,Y_mg,Z_mg,X_mGa,Y_mGa,Z_mGa,X_dps,Y_dps,Z_dps=sensortile.collect_data()
-   
+
    data = np.array([[np.mean(X_dps), np.mean(X_mGa),np.mean(X_mg),
                  np.mean(Y_dps), np.mean(Y_mGa),np.mean(Y_mg ),
                  np.mean(Z_dps), np.mean(Z_mGa), np.mean(Z_mg )]])
-   
-   [print(idx) for idx,val in enumerate(data[0]) if np.isnan(val)]
-   
+
+   #[print(idx) for idx,val in enumerate(data[0]) if np.isnan(val)]
+
    if not any([np.isnan(val) for val in data[0]]):
-       print (data)
-       print (pca_data)
-       X_scaled = scaler.fit_transform(data)
-       print (X_scaled)
-       #X_pca = pca_data.fit(X_scaled)
-       #X_tsne = tsne.transform(X_pca)
-       
-       #ypred = model.predict(X_tsne)
-       
-       ypred = model.predict(X_scaled)
+
+       X_scaled = scaler.transform(data)
+       X_pca = pca_data.transform(X_scaled)
+       #X_tsne = tsne.fit_transform(np.append(X_pca,X_pca,axis=0))[0]
+       #X_tsne = pd.DataFrame({'f0':[X_pca[0,0]], 'f1':[X_pca[0,1]]})
+
+       ypred = model.predict(X_pca)
 
        label = label_encoder.inverse_transform(ypred)
-       
-       print('Predcited gesture = ', label)
 
-     
+     #  X_scaled_p = scaler_p.transform(data)
+      # X_pca_p = pca_data_p.transform(X_scaled_p)
+      # X_tsne_p = tsne_p.transform(X_pca_p)
 
+      # ypred_p = model_p.predict(X_tsne_p)
 
-    
-       
-
-
+      # label_p = label_encoder_p.inverse_transform(ypred_p)
 
 
-       
-       
+       print(f'Predcited gesture = {label[0]}')
 
-  
-    
-  
-    
-  
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     #this is where Vikram needs to insert his code (create a vector of accelaration, displcement, ...)
     #prediction, confidence = model(short_history_displ, short_history_accel, ...)
-    
+
     #if confidence > 0.8 and prediction == "L":
     #   pyautogui.moveTo(current_x - 10, current_y, duration = 0.25)
  #   current_x, current_y = pyautogui.position()
