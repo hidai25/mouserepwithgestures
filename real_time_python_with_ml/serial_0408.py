@@ -71,18 +71,10 @@ class serial_SensorTile():
 
 
 
+
+
+
     def collect_data(self):
-
-
-        #accelx = []
-       # accely = []
-       # accelz = []
-       # gyrx = []
-      #  gyry = []
-      #  gyrz = []
-      #  magx = []
-      #  magy = []
-      #  magz = []
 
         X_mGa=[]
         Y_mGa=[]
@@ -133,7 +125,6 @@ class serial_SensorTile():
 
 
                 if 'ACC' in data[0]:
-                    #print("{}".format(data[0].replace("\r","")))
 
                     result = prog.findall(data[0].replace("\r",""))[0]
 
@@ -142,7 +133,6 @@ class serial_SensorTile():
                     Z_mGa.append(float(result[2]))
 
                 if 'GYR' in data[0]:
-                   # print("{}".format(data[0].replace("\r","")))
 
                     result1 = prog1.findall(data[0].replace("\r",""))[0]
 
@@ -152,7 +142,6 @@ class serial_SensorTile():
 
 
                 if 'MAG' in data[0]:
-                  #  print("{}".format(data[0].replace("\r","")))
 
                     result2 = prog2.findall(data[0].replace("\r",""))[0]
 

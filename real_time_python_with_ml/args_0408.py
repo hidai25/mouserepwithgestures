@@ -34,7 +34,7 @@ def PerformMyGesture(label, confidence):
 
     screen_width, screen_height = pyautogui.size()
     new_x, new_y = pyautogui.position()
-    
+
     if label == "S":
         pyautogui.click(new_x, new_y)
         return
@@ -54,13 +54,12 @@ def PerformMyGesture(label, confidence):
     pyautogui.moveTo(new_x, new_y, duration = 0.25)
 
 while True:
-    # accelx, accely, accelz, gyrx, gyry, gyrz, magx, magy, magz = sensortile.collect_data()
     X_mg,Y_mg,Z_mg,X_mGa,Y_mGa,Z_mGa,X_dps,Y_dps,Z_dps=sensortile.collect_data()
-    
+
     data = np.array([[np.mean(X_dps), np.mean(X_mGa),np.mean(X_mg),
                       np.mean(Y_dps), np.mean(Y_mGa),np.mean(Y_mg ),
                       np.mean(Z_dps), np.mean(Z_mGa), np.mean(Z_mg )]])
-                      
+
     if not any([np.isnan(val) for val in data[0]]):
         X_scaled = scaler.transform(data)
         X_pca = pca_data.transform(X_scaled)
