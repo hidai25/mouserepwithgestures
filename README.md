@@ -1,17 +1,17 @@
 
 ### Team Name: Computer mouse replication with gestures
 
-### Team Members and Roles:
+### Team Members:
 
-Gurel Ari (gurelari.ivy@gmail.com) => Data Collection
+Gurel Ari (gurelari.ivy@gmail.com)
 
-Hidai Bar-mor (hidai25@gmail.com) => Data Processing
+Hidai Bar-mor (hidai25@gmail.com)
 
-Vikram Maduskar (vim882@g.harvard.edu) => Data Modeling and Machine Learning
+Vikram Maduskar (vim882@g.harvard.edu)
 
-Nina Tabari ( naz706@g.harvard.edu) => Project Lead and writing the python script
+Nina Tabari ( naz706@g.harvard.edu)
 
-Vasco Meerman (vmeerman.appdev@gmail.com) => BE development  
+Vasco Meerman (vmeerman.appdev@gmail.com)
 
 #### Project’s website:
 
