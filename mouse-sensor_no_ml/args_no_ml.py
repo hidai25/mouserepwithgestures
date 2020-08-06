@@ -12,13 +12,13 @@ import numpy as np
 import pyautogui
 
 
-import Nina_serial_hidai
+import serial_no_ml
 
 
 import time
 
 
-
+#add here your sensortile port
 address= '/dev/cu.usbmodemFFFFFFFEFFFF1'
 
 baud_rate = 9600
@@ -30,7 +30,7 @@ Tsample = 0.01
 
 # serial initialization
 
-sensortile = Nina_serial_hidai.serial_SensorTile(address, baud_rate, timeout, True)
+sensortile = serial_no_ml.serial_SensorTile(address, baud_rate, timeout, True)
 
 sensortile.init_connection()
 
@@ -41,7 +41,7 @@ screen_width, screen_height = pyautogui.size()
 while True:
 
     accelx, accely, accelz, gyrx, gyry, gyrz, magx, magy, magz = sensortile.collect_data()
-    #Hidai needs to add angular velocity, accelaration, and whatever is used by the model
+
     accelx = list(accelx)
     accely = list(accely)
     accelz = list(accelz)
@@ -53,7 +53,7 @@ while True:
     magz = list(magz)
 
     time.sleep(1)
-
+    # calculate avergae of sensors output in order to avoid zeros in the list
     if len(accelx) > 0:
         print('ACCEL_x = ', sum(accelx)/len(accelx))
     if len(accely) > 0:
@@ -76,11 +76,7 @@ while True:
         print('MAG_z = ', sum(magz)/len(magz))
 
 
-    #this is where Vikram needs to insert his code (create a vector of accelaration, displcement, ...)
-    #prediction, confidence = model(short_history_displ, short_history_accel, ...)
-
-    #if confidence > 0.8 and prediction == "L":
-    #   pyautogui.moveTo(current_x - 10, current_y, duration = 0.25)
+    #start from current position
     current_x, current_y = pyautogui.position()
     new_x = current_x
     new_y = current_y
@@ -96,7 +92,7 @@ while True:
     new_x = max(0, min(screen_width, new_x))
     new_y = max(0, min(screen_height, new_y))
 
-   # pyautogui.moveTo(new_x, new_y, duration = 0.25)
+    pyautogui.moveTo(new_x, new_y, duration = 0.25)
 
 # shutdown the system after closing the plot
 
