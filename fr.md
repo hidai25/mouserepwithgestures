@@ -66,8 +66,8 @@ So before we could use the data as test and training data to create our machine 
 
 1. Reading in each separate movement file, per sensor.
 
-![GitHub Logo](/imgs_fr/im1.png)
-Format: ![Alt Text](url)
+![im1](/imgs_fr/im1.png)
+
 
 
 As you can see here we have 3 different sensor files per each numbered movement per movement type (e.g down)
