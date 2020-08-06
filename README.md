@@ -1,7 +1,7 @@
 
 ### Team Name: Computer mouse replication with gestures
 
-### Team Members and Roles: (Depending on the strengths of each member as an example)
+### Team Members and Roles: 
 
 Gurel Ari (gurelari.ivy@gmail.com) => Data Collection
 
