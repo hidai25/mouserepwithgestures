@@ -70,18 +70,26 @@ So before we could use the data as test and training data to create our machine 
 
 
 
-As you can see here we have 3 different sensor files per each numbered movement per movement type (e.g down)
-Merging each separate movement into 1 file consisting of all different x,y and z axis for each sensor.
+a. As you can see here we have 3 different sensor files per each numbered movement per movement type (e.g down)
+
+2. Merging each separate movement into 1 file consisting of all different x,y and z axis for each sensor.
 This happened for both the datasets we got simultaneously, so both persons.
-Then deciding based on our test/train cutoff where each merged movement file was going to be concatenated to.
+
+3. Then deciding based on our test/train cutoff where each merged movement file was going to be concatenated to.
 
 ![im2](/imgs_fr/im2.png)
 
-Note that we’re getting the data from both person’s numbered movements (e.g. move_1, move_g_1), at the same time, because we want our test/train data sets to contain an amount of movement data frames from both persons.
-Now that all the data of a movement is merged and concatenated and separated evenly from both persons into a test and training set, we repeat the process for each movement until we have all or movement separated in test/train.
-Lastly we clean and optimize both datasets before saving them to csv files, ready to use with our ML.
+a. Note that we’re getting the data from both person’s numbered movements (e.g. move_1, move_g_1), at the same time, because we want our test/train data sets to contain an amount of movement data frames from both persons.
+
+4. Now that all the data of a movement is merged and concatenated and separated evenly from both persons into a test and training set, we repeat the process for each movement until we have all or movement separated in test/train.  
+
+5. Lastly we clean and optimize both datasets before saving them to csv files, ready to use with our ML.
+
+![im3](/imgs_fr/im3.png)
 
 These are the stats of the project we just described:
+
+![im4](/imgs_fr/im4.png)
 
 The data was then uploaded to github, so it could be used to generate our Machine Learning models.  
 
