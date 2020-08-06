@@ -3,7 +3,7 @@ import numpy as np
 import pyautogui
 import pandas as pd
 from sklearn.preprocessing import StandardScaler, LabelEncoder
-import serial_0408
+import serial_with_ml
 import time
 import joblib
 import warnings
@@ -16,13 +16,14 @@ scaler = joblib.load(r'sav_files/scaler.sav')
 pca_data = joblib.load(r'sav_files/pca.sav')
 label_encoder = joblib.load(r'sav_files/label_encoder.sav')
 
+# enter your computer's sensotile port
 address= '/dev/cu.usbmodemFFFFFFFEFFFF1'
 baud_rate = 9600
 timeout = 2
 Tsample = 0.01
 
 # serial initialization
-sensortile = serial_0408.serial_SensorTile(address, baud_rate, timeout, True)
+sensortile = serial_with_ml.serial_SensorTile(address, baud_rate, timeout, True)
 
 sensortile.init_connection()
 
@@ -66,7 +67,8 @@ while True:
 
         ypred = model.predict(X_pca)
         yconf = model.predict_proba(X_pca)
-
+        # get the right label form the model to show the user the predictions and then use the
+        # function to control the mouse with the predicted movement 
         label = label_encoder.inverse_transform(ypred)
         print('Predcited gesture = {} | {}'.format(label, np.max(yconf)))
         PerformMyGesture(label[0], np.max(yconf))
