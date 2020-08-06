@@ -1,7 +1,7 @@
 
 ### Team Name: Computer mouse replication with gestures
 
-### Team Members and Roles: 
+### Team Members and Roles:
 
 Gurel Ari (gurelari.ivy@gmail.com) => Data Collection
 
@@ -13,6 +13,9 @@ Nina Tabari ( naz706@g.harvard.edu) => Project Lead and writing the python scrip
 
 Vasco Meerman (vmeerman.appdev@gmail.com) => BE development  
 
+#### Project’s website:
+
+http://hidai25.github.io/mouse_project_frontend  
 
 # Project Final Report:
 
@@ -209,11 +212,6 @@ a. Basically we created a bridge in React with a native JS library through a pol
 
 Project Repository – Github, Video URL, Online Resources:
 
-#### Project’s website:
 
-http://hidai25.github.io/mouse_project_frontend  
-
-#### Projects github repository:
-https://github.com/hidai25/mouserepwithgestures
 
 #### References:
