@@ -117,8 +117,28 @@ A few samples of the EDA data visualization plots from our Jupyter notebook:
 
 
 
+![im5](/imgs_fr/im5.png)
 
 
+
+
+
+![im6](/imgs_fr/im6.png)
+
+
+
+![im7](/imgs_fr/im7.png)
+
+
+
+![im8](/imgs_fr/im8.png)
+
+
+
+![im9](/imgs_fr/im9.png)
+
+
+![im10](/imgs_fr/im10.png)
 
 
 
