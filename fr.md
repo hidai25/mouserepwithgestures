@@ -63,7 +63,12 @@ For each movement, we decided it would be best to use 75% of the data for traini
 The movement data we collected had a time frame of seconds per movement. The sensory data of each movement was split into 3 separate files for each sensor, so we had 3 different movement files per movement on the exact same time frame with each file consisting of different x, y and z axis corresponding to 1 of the sensors. Also each of the people recording the data, made 15 recordings per movement type. So to split our test/train data, we made a cutoff at the 11th movement per person, which came to approximately 25/75 test/train data. We could not do 30/70, since this would mean we would have to cut some time frames into 2 parts.
 
 So before we could use the data as test and training data to create our machine learning model, we first had to merge each movement’s sensor data into 1 file and then concatenate all the time frames into a training and test dataset. To do this, Vasco created a separate pipenv project, which consisted of these steps:
-Reading in each separate movement file, per sensor.
+
+1. Reading in each separate movement file, per sensor.
+
+![GitHub Logo](/imgs_fr/im1.png)
+Format: ![Alt Text](url)
+
 
 As you can see here we have 3 different sensor files per each numbered movement per movement type (e.g down)
 Merging each separate movement into 1 file consisting of all different x,y and z axis for each sensor.
@@ -157,4 +162,5 @@ http://hidai25.github.io/mouse_project_frontend
 
 #### Projects github repository:
 https://github.com/hidai25/mouserepwithgestures
-References:
+
+#### References:
