@@ -231,3 +231,7 @@ Project Repository – Github, Video URL, Online Resources:
 
 
 #### References:
+
+1. https://machinelearningmastery.com/how-to-model-human-activity-from-smartphone-data/
+2. http://stanford.edu/class/ee267/Spring2018/report_adu_bran-melendez.pdf
+3. https://lembergsolutions.com/blog/motion-gesture-detection-using-tensorflow-android
