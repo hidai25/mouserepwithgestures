@@ -6,3 +6,4 @@ pickle
 joblib
 plotly
 pyautogui
+warnings
