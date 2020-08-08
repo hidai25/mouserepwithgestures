@@ -15,7 +15,16 @@ Vasco Meerman (vmeerman.appdev@gmail.com)
 
 #### Project’s website:
 
-http://hidai25.github.io/mouse_project_frontend  
+http://hidai25.github.io/mouse_project_frontend
+
+#### Project's final report as doc link
+
+https://docs.google.com/document/d/1TM3cnXAKhGE9lWE4td8HVvYHD-0HirLWib5uMbJO_NM/edit#
+
+#### Project's presentation slides link
+
+https://docs.google.com/presentation/d/1ZjFqtCon_x1EMU-v_c2ewjLWq1iY7ka7adcWAtqnZik/edit#slide=id.g8ee8088bb2_0_0
+
 
 ### Runnning instructions
 
