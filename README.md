@@ -17,6 +17,16 @@ Vasco Meerman (vmeerman.appdev@gmail.com)
 
 http://hidai25.github.io/mouse_project_frontend  
 
+### Runnning instructions
+
+In order to make the project work you first have to have tutorial 1 code running of the link:
+
+"https://sites.google.com/view/ucla-stmicroelectronics-iot/home". The sensortile should send data to your computer. Then you have to do the following:
+
+1. In order to run the project with machine learning, go to the folder "real_time_python_with_ml" and open the file "args_with_ml". Enter inside the file your own computers sensortile port name. Then, while having the file "serial_with_ml" in the same file and the folder sav_files run the file args_with_ml in python and the project will start working.
+
+2. In order to run the project without the machine learning (only mouse controlled by the sensor) go to the folder "mouse-sensor_no_ml" and open the file "args_no_ml". Change the address line to your computer sensortile port and make sur the file "serial_no_ml" is in the same folder. Then run the "args_no_ml" file and the project will start working.
+
 # Project Final Report:
 
 # About the Project:
