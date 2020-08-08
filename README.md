@@ -19,7 +19,8 @@ http://hidai25.github.io/mouse_project_frontend
 
 ### Runnning instructions
 
-Firstly while your terminal is on the project folder do: pip3 install -r requirements.txt
+Firstly while your terminal is on the project folder do:  
+"pip3 install -r requirements.txt"
 in order to make sure you have all the required packages for the project.
 
 Then order to make the project work you first have to have tutorial 1 code running of the link:
