@@ -235,7 +235,6 @@ a. Basically we created a bridge in React with a native JS library through a pol
 
 7. Lastly the user can start again to try another movement.
 
-Project Repository – Github, Video URL, Online Resources:
 
 
 
