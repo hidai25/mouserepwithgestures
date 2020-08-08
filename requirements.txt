@@ -2,8 +2,6 @@ pandas
 numpy
 matplotlib
 scikit-learn
-pickle
 joblib
 plotly
 pyautogui
-warnings
