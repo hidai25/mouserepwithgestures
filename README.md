@@ -28,7 +28,13 @@ https://docs.google.com/presentation/d/1ZjFqtCon_x1EMU-v_c2ewjLWq1iY7ka7adcWAtqn
 
 ####  Project demo live link
 
+##### Long demo:
+
 https://www.youtube.com/watch?v=G43_SA3sqqU
+
+##### Short demo:
+
+https://www.youtube.com/watch?v=UWKKET0JJc0
 
 ### Runnning instructions
 
