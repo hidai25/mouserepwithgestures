@@ -245,7 +245,7 @@ a. Basically we created a bridge in React with a native JS library through a pol
 
 7. Lastly the user can start again to try another movement.
 
-##### links for the web app and its repository we were working on(these are additional stretch goals of the project since we had more time after the project was finalised successfully):
+##### Links for the web app and its repository we were working on(these are additional stretch goals of the project since we had more time after the project was finalised successfully):
 
 https://www.mcwp.vsc.app/
 
