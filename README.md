@@ -245,10 +245,13 @@ a. Basically we created a bridge in React with a native JS library through a pol
 
 7. Lastly the user can start again to try another movement.
 
+##### links for the web app and its repository we were working on(these are additional stretch goals of the project since we had more time after the project was finalised successfully):
 
+https://www.mcwp.vsc.app/
 
+https://github.com/10686142/MouseClassifierWebProject
 
-#### References:
+#### References used for the project:
 
 1. https://machinelearningmastery.com/how-to-model-human-activity-from-smartphone-data/
 2. http://stanford.edu/class/ee267/Spring2018/report_adu_bran-melendez.pdf
